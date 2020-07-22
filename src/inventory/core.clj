@@ -26,7 +26,7 @@
       discounted-price)
     original-price))
 
-; higher order functions: you can pass functions as arguments
+; higher order functions: you can pass functions as arguments, return functions as values, anonymous functions
 
 (println (discounted-price (fn [price] (more-expensive-than? 100 price)) 100))
 (println (discounted-price (partial more-expensive-than? 100) 1000))
@@ -43,3 +43,25 @@
 (println (discounted-price
            #(and (>= % 500) (<= % 2000))
            100))
+
+((fn [price] (>= price 50)) 1000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

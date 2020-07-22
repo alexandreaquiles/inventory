@@ -38,3 +38,7 @@ OO Design Patterns/Principles vs Functional Programming:
 - https://gist.github.com/pbalduino/a48f9ebb169c5a86d27b
 - https://blog.cleancoder.com/uncle-bob/2014/11/24/FPvsOO.html
 - http://mishadoff.com/blog/clojure-design-patterns/ (via Kazuki Yokoyama)
+
+# Day 3
+
+- https://speakerdeck.com/glaforge/groovy-in-the-light-of-java-8-javaone-2014?slide=107
