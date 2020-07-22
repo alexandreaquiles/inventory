@@ -1,6 +1,16 @@
 (ns inventory.pricing)
 
-(def prices [30 700 1000])
+
+(def quantities '(30 700 1000))                             ; list
+(count quantities)
+(conj quantities 120 )                                      ; first element
+; (quantities 0) ; error
+
+(class quantities)                                          ; clojure.lang.PersistentList
+
+(def prices [30 700 1000])                                  ; vector
+
+(class prices)                                              ; clojure.lang.PersistentVector
 
 (prices 0)
 
@@ -17,7 +27,7 @@
 (get prices 2 0)
 (get prices 999 0)
 
-(conj prices 120)
+(conj prices 120)                                           ; last element
 
 (count prices)
 
