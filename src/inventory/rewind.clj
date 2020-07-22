@@ -34,3 +34,10 @@
 (print-receipt "Andreia" "The NeverEnding Story" regular-rental-amount 2)
 (print-receipt "Carlos" "Rocky VII" release-rental-amount 3)
 
+(def period [2 3 2 5 6 2 3 4 2])
+
+(reduce + (map regular-rental-amount period))
+
+(reduce +
+        (map regular-rental-amount
+             (filter #(> % 2) period)))
