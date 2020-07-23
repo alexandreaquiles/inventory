@@ -78,9 +78,9 @@
 
 (reduce + prices)
 
-(defn my-sum [a b]
-  (println "adding" "a=" a ", b=" b)
-  (+ a b))
+(defn my-sum [acc el]
+  (println "adding" "a=" acc ", b=" el)
+  (+ acc el))
 
 (range 5)
 (reduce my-sum (range 5))

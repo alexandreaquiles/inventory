@@ -10,6 +10,9 @@
 
 ;(def inventory {"Backpack" 10, "Shirt" 5})
 (def inventory {:backpack 10, :shirt 5})                    ; keywords as keys
+(inventory :backpack)
+(:backpack inventory)
+
 (count inventory)
 
 (keys inventory)
@@ -24,10 +27,12 @@
 (update inventory :backpack dec)
 (update inventory :backpack #(- % 3))
 
-(def order {:product/backpack {:quantity 2
-                       :price 80}
-            :product/shirt {:quantity 3
-                    :price 40}})
+(def order {:product/backpack
+                           {:quantity 2
+                            :price 80}
+            :product/shirt
+                           {:quantity 3
+                            :price 40}})
 
 (println order)
 
@@ -56,7 +61,7 @@
 (:price (:product/backpack order))
 
 
-;(update order :product/backpack inc)                        ; error
+;(update order :product/backpack inc)   ; error                      ; error
 ;(update order :quantity inc) ; error
 
 (update-in order [:product/backpack :quantity] inc)

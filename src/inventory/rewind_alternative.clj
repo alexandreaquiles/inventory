@@ -38,3 +38,4 @@
   (println (receipt "Carlos" "Rocky VII" RELEASE 3)))
 
 (print-receipt)
+
