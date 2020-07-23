@@ -81,3 +81,30 @@
                 :movie {:title "Rocky VII"
                         :type   :release}
                 :days  3})
+
+(def history [{:name  "Alexandre"
+               :movie {:title "Back to the Future"
+                       :type   :regular}
+               :days  5},
+              {:name  "Andreia"
+               :movie {:title "The NeverEnding Story"
+                       :type   :regular}
+               :days  2},
+              {:name  "Carlos"
+               :movie {:title "Rocky VII"
+                       :type   :release}
+               :days  3}])
+
+(defn bill
+  [rental-info]
+  (let [days (:days rental-info)
+        movie-type (get-in rental-info [:movie :type])
+        rental-calculation (movie-type rental-values)]
+    (rental-calculation days)))
+
+(defn history-amount
+  []
+  (->> history (map bill) (reduce +)))
+
+(println (history-amount))
+
